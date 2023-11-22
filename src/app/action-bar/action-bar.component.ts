@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,18 +10,19 @@ import { CommonModule } from '@angular/common';
 })
 export class ActionBarComponent {
   counter: number = 0;
+  @Input() step:number = 1;
 
   decrease() {
-    console.log('decrease');
-    if (this.counter - 1 >= 0) {
-      this.counter = this.counter -1;
+    console.log('ลดค่าครั้งละ :', this.step, "=",this.counter );
+    if (this.counter - this.step >= 0) {
+      this.counter = this.counter - this.step;
     }
   }
 
   increase() {
-    console.log('increase');
-    if(this.counter + 1 <= 10) {
-    this.counter =  this.counter+1;
+    console.log('เพิ่มค่าครั้งละ :', this.step, "=",this.counter);
+    if(this.counter + this.step <= 50) {
+    this.counter =  this.counter+ this.step;
     }
   }
 }
