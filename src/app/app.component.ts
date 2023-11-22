@@ -13,4 +13,12 @@ import { ActionBarComponent } from './action-bar/action-bar.component';
 })
 export class AppComponent {
   title = 'learn-angular';
+
+  testClick() {
+    console.log('testEventBinding_Button');
+  }
+
+  testNumberChange(value: number) {
+    console.log('testEventBinding_NumberChange from app.component.ts: ', value);
+  }
 }

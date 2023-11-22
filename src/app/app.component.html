@@ -1,5 +1,7 @@
 Hi, I'm the app component!
 test
-<app-action-bar [step]="5"></app-action-bar>
-<app-action-bar [step]="10"></app-action-bar>
-<app-action-bar [step]="1"></app-action-bar>
+<app-action-bar (numberChange)="testNumberChange($event)" [step]="5"></app-action-bar>
+<app-action-bar (numberChange)="testNumberChange($event)" [step]="10"></app-action-bar>
+<!-- <app-action-bar [step]="1"></app-action-bar> -->
+<br>
+<button type="button" (click)="testClick()">testEventBinding</button>
