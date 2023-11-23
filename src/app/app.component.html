@@ -1,7 +1,20 @@
-Hi, I'm the app component!
-test
+<p>I'm the app component!</p>
+
+<!-- <hr />
 <app-action-bar (numberChange)="testNumberChange($event)" [step]="5"></app-action-bar>
 <app-action-bar (numberChange)="testNumberChange($event)" [step]="10"></app-action-bar>
-<!-- <app-action-bar [step]="1"></app-action-bar> -->
 <br>
-<button type="button" (click)="testClick()">testEventBinding</button>
+<button type="button" (click)="testClick()">testEventBinding</button> -->
+
+<hr />
+<P>Add Function Max-Min_Meter from max-min-meter component</P>
+<app-max-min-meter
+  [minLabel]="MyminLabel"
+  [maxLabel]="MymaxLabel"
+
+  (maxChange)="doAppMaxChange($event)"
+  (minChange)="doAppMinChange($event)"
+
+  >
+
+</app-max-min-meter>
