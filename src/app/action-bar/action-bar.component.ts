@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 export class ActionBarComponent {
   @Input() step: number = 1;
   @Output() numberChange = new EventEmitter();
-  counter: number = 0;
+  @Input() counter = 0;
 
   decrease() {
     if (this.counter - this.step >= 0) {

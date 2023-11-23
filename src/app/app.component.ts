@@ -31,6 +31,8 @@ throw new Error('Method not implemented.');
   MydivWidth = 20;
   MydivHeight = 20;
 
+  appCounter = 20;
+
   testClick() {
     console.log('testEventBinding_Button');
   }

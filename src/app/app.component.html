@@ -8,7 +8,10 @@
 
 <hr />
 <P>Add Function Max-Min_Meter from max-min-meter component</P>
-<app-max-min-meter [minLabel]="MyminLabel" [maxLabel]="MymaxLabel" (maxChange)="doAppMaxChange($event)"
+<app-max-min-meter
+  [minLabel]="MyminLabel"
+  [maxLabel]="MymaxLabel"
+  (maxChange)="doAppMaxChange($event)"
   (minChange)="doAppMinChange($event)">
 
 </app-max-min-meter>
@@ -31,3 +34,8 @@
 
 </app-sqaure-flex>
 <hr />
+
+<app-action-bar [counter]="appCounter"
+  (numberChange)="appCounter = $event">
+</app-action-bar>
+<app-sqaure-flex [divWidth]="appCounter" ></app-sqaure-flex>
