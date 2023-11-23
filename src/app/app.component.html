@@ -8,13 +8,26 @@
 
 <hr />
 <P>Add Function Max-Min_Meter from max-min-meter component</P>
-<app-max-min-meter
-  [minLabel]="MyminLabel"
-  [maxLabel]="MymaxLabel"
-
-  (maxChange)="doAppMaxChange($event)"
-  (minChange)="doAppMinChange($event)"
-
-  >
+<app-max-min-meter [minLabel]="MyminLabel" [maxLabel]="MymaxLabel" (maxChange)="doAppMaxChange($event)"
+  (minChange)="doAppMinChange($event)">
 
 </app-max-min-meter>
+
+
+<hr />
+<div>Edit width
+  <button type="button" (click)="MydivWidth=10">10px</button>
+  <button type="button" (click)="MydivWidth=40">40px</button>
+  <button type="button" (click)="MydivWidth=100">100px</button>
+  <label for=""> width : {{MydivWidth}}px</label>
+</div>
+<div>Edit height
+  <button type="button" (click)="MydivHeight=10">10px</button>
+  <button type="button" (click)="MydivHeight=40">40px</button>
+  <button type="button" (click)="MydivHeight=100">100px</button>
+  <label for=""> height : {{MydivHeight}}px</label>
+</div>
+<app-sqaure-flex [divWidth]="MydivWidth" [divHeight]="MydivHeight">
+
+</app-sqaure-flex>
+<hr />

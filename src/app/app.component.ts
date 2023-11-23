@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ActionBarComponent } from './action-bar/action-bar.component';
 import { MaxMinMeterComponent } from './max-min-meter/max-min-meter.component';
+import { SqaureFlexComponent } from './sqaure-flex/sqaure-flex.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { MaxMinMeterComponent } from './max-min-meter/max-min-meter.component';
     RouterOutlet,
     ActionBarComponent,
     MaxMinMeterComponent,
+    SqaureFlexComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -26,6 +28,8 @@ throw new Error('Method not implemented.');
   title = 'learn-angular';
   MyminLabel = 'AppMyMinLabel';
   MymaxLabel = 'AppMyMaxLabel';
+  MydivWidth = 20;
+  MydivHeight = 20;
 
   testClick() {
     console.log('testEventBinding_Button');
