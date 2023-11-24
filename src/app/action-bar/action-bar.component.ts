@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SqaureFlexComponent } from '../sqaure-flex/sqaure-flex.component';
 
 @Component({
   selector: 'app-action-bar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SqaureFlexComponent],
   templateUrl: './action-bar.component.html',
   styleUrl: './action-bar.component.scss',
 })
@@ -18,14 +19,16 @@ export class ActionBarComponent {
       this.counter = this.counter - this.step;
       this.numberChange.emit(this.counter);
     }
-    // console.log('ลดค่าครั้งละ :', this.step, "=",this.counter );
   }
 
   increase() {
-    if (this.counter + this.step <= 50) {
+    if (this.counter + this.step <= 100) {
       this.counter = this.counter + this.step;
       this.numberChange.emit(this.counter);
     }
-    // console.log('เพิ่มค่าครั้งละ :', this.step, "=",this.counter);
   }
 }
+
+// <app-action-bar
+// [(counter)]="appCounter">
+// </app-action-bar>

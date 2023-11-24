@@ -6,7 +6,7 @@
 <br>
 <button type="button" (click)="testClick()">testEventBinding</button> -->
 
-<hr />
+<!-- <hr />
 <P>Add Function Max-Min_Meter from max-min-meter component</P>
 <app-max-min-meter
   [minLabel]="MyminLabel"
@@ -14,7 +14,7 @@
   (maxChange)="doAppMaxChange($event)"
   (minChange)="doAppMinChange($event)">
 
-</app-max-min-meter>
+</app-max-min-meter> -->
 
 
 <hr />
@@ -35,7 +35,10 @@
 </app-sqaure-flex>
 <hr />
 
-<app-action-bar [counter]="appCounter"
-  (numberChange)="appCounter = $event">
-</app-action-bar>
-<app-sqaure-flex [divWidth]="appCounter" ></app-sqaure-flex>
+<div *ngIf="active">
+  <app-action-bar [counter]="appCounter" (numberChange)="appCounter = $event" [step]="10">
+  </app-action-bar>
+
+  <app-sqaure-flex [divWidth]="appCounter"></app-sqaure-flex>
+</div>
+<button type="button" (click)="active=true" >Show</button>

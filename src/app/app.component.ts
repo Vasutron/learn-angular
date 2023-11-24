@@ -22,6 +22,7 @@ export class AppComponent {
 doMaxChange($event: any) {
 throw new Error('Method not implemented.');
 }
+
 doMinChange($event: any) {
 throw new Error('Method not implemented.');
 }
@@ -32,6 +33,8 @@ throw new Error('Method not implemented.');
   MydivHeight = 20;
 
   appCounter = 20;
+
+  active : boolean = false;
 
   testClick() {
     console.log('testEventBinding_Button');
