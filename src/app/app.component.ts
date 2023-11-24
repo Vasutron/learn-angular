@@ -35,7 +35,8 @@ throw new Error('Method not implemented.');
   appCounter = 20;
 
   active : boolean = false;
-  // activeEdit : boolean = false;
+
+  customerList : string[] = ['Customer1', 'Customer2', 'Customer3', 'Customer4', 'Customer5'];
 
   testClick() {
     console.log('testEventBinding_Button');

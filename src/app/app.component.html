@@ -53,5 +53,14 @@
   </div>
 </ng-template> -->
 
-<app-action-bar [inputDisplay]="false"></app-action-bar>
-<app-action-bar [inputDisplay]="true"></app-action-bar>
+<!-- <app-action-bar [inputDisplay]="false"></app-action-bar>
+<app-action-bar [inputDisplay]="true"></app-action-bar> -->
+
+<div>
+  <span>
+    <b>Array 0 : {{customerList[0]}}</b>
+  </span>
+  <ul>
+    <li *ngFor="let customer of customerList">{{customer}}</li>
+  </ul>
+</div>
