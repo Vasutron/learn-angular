@@ -13,6 +13,7 @@ export class ActionBarComponent {
   @Input() step: number = 1;
   @Output() numberChange = new EventEmitter();
   @Input() counter = 0;
+  @Input() inputDisplay = true;
 
   decrease() {
     if (this.counter - this.step >= 0) {

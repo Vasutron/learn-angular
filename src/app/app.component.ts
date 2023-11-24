@@ -35,6 +35,7 @@ throw new Error('Method not implemented.');
   appCounter = 20;
 
   active : boolean = false;
+  // activeEdit : boolean = false;
 
   testClick() {
     console.log('testEventBinding_Button');
