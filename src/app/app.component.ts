@@ -13,19 +13,19 @@ import { SqaureFlexComponent } from './sqaure-flex/sqaure-flex.component';
     RouterOutlet,
     ActionBarComponent,
     MaxMinMeterComponent,
-    SqaureFlexComponent
+    SqaureFlexComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-doMaxChange($event: any) {
-throw new Error('Method not implemented.');
-}
+  doMaxChange($event: any) {
+    throw new Error('Method not implemented.');
+  }
 
-doMinChange($event: any) {
-throw new Error('Method not implemented.');
-}
+  doMinChange($event: any) {
+    throw new Error('Method not implemented.');
+  }
   title = 'learn-angular';
   MyminLabel = 'AppMyMinLabel';
   MymaxLabel = 'AppMyMaxLabel';
@@ -34,9 +34,15 @@ throw new Error('Method not implemented.');
 
   appCounter = 20;
 
-  active : boolean = false;
+  active: boolean = false;
 
-  customerList : string[] = ['Customer1', 'Customer2', 'Customer3', 'Customer4', 'Customer5'];
+  customerList: string[] = [
+    'Customer1',
+    'Customer2',
+    'Customer3',
+    'Customer4',
+    'Customer5',
+  ];
 
   testClick() {
     console.log('testEventBinding_Button');
@@ -53,5 +59,13 @@ throw new Error('Method not implemented.');
   doAppMinChange(value: number) {
     console.log('doAppMinChange from app.component.ts: ', value);
   }
+
+  pushData(){
+    this.customerList.push('Customer' + (this.customerList.length + 1));
+  } // เพิ่มข้อมูลไปที่ตำแหน่งสุดท้ายของ Array
+
+  unshiftData(){
+    this.customerList.unshift('Customer' + (this.customerList.length + 1));
+  } // เพิ่มข้อมูลไปที่ตำแหน่งแรกของ Array
 
 }
