@@ -60,9 +60,14 @@
 <button type="button" (click)="unshiftData()">Unshift</button>
 <div>
   <span>
-    <b>Array 0 : {{customerList[0]}}</b>
+    <b>Array : {{customerList}}</b>
   </span>
   <ul>
-    <li *ngFor="let customer of customerList">{{customer}}</li>
+    <li *ngFor="let customer of customerList;let i=index">
+      {{customer}}
+      <button type="button" style="margin-left: 4px;" (click)="deleteCus(i)">
+        Delete
+      </button>
+    </li>
   </ul>
 </div>

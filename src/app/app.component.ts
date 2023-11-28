@@ -68,4 +68,9 @@ export class AppComponent {
     this.customerList.unshift('Customer' + (this.customerList.length + 1));
   } // เพิ่มข้อมูลไปที่ตำแหน่งแรกของ Array
 
+  deleteCus(index: number){
+    this.customerList.splice(index, 1);
+  } // ลบข้อมูลตำแหน่งสุดท้ายของ Array
+
+
 }
