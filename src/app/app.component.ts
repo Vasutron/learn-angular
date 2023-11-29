@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { ActionBarComponent } from './action-bar/action-bar.component';
 import { MaxMinMeterComponent } from './max-min-meter/max-min-meter.component';
 import { SqaureFlexComponent } from './sqaure-flex/sqaure-flex.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TestRequestModule } from './test-request/test-request.module';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +16,8 @@ import { SqaureFlexComponent } from './sqaure-flex/sqaure-flex.component';
     ActionBarComponent,
     MaxMinMeterComponent,
     SqaureFlexComponent,
+    HttpClientModule,
+    TestRequestModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

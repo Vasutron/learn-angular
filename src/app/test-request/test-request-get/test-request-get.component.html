@@ -1,0 +1,24 @@
+<p>test-request-get works! : เรียนรู้การใช้งาน API</p>
+<div>
+  <label for="">ชื่อหนังสือ : </label><input type="text" #myNameInputText />
+  <button type="button" (click)="searcBookList(myNameInputText.value)">ค้นหา</button>
+</div>
+<div *ngFor="let book of bookList">
+  <table style=" width: 50%; border: 1px solid black;">
+    <tr>
+      <td>ISBN</td>
+      <td>BookName</td>
+      <td>Author</td>
+    </tr>
+    <tr>
+      <td>{{book.isbn}}</td>
+      <td>{{book.name}}</td>
+      <td>{{book.authors}}</td>
+    </tr>
+  </table>
+</div>
+<hr>
+<!-- <div *ngFor="let book of bookList">
+  {{book.isbn}} - <b>BookName :</b> <u>{{book.name}}</u>
+  <p><b>Author by: {{book.authors}}</b></p>
+</div> -->
